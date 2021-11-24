@@ -1,0 +1,4 @@
+data/**/*.json
+data/**/*.zip
+data/**/*DS_Store
+Untitled.ipynb
