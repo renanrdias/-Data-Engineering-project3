@@ -12,7 +12,6 @@ config.read_file(open('dl.cfg'))
 
 os.environ['AWS_ACCESS_KEY_ID'] = config['AWS']['AWS_ACCESS_KEY_ID']
 os.environ['AWS_SECRET_ACCESS_KEY'] = config['AWS']['AWS_SECRET_ACCESS_KEY']
-os.environ['AWS_DEFAULT_REGION'] = config['AWS']['AWS_DEFAULT_REGION']
 
 
 def create_spark_session():
@@ -143,8 +142,8 @@ def process_log_data(spark, input_data, output_data):
 def main():
     spark = create_spark_session()
 
-    input_data = 's3a://udacity-dend/'
-    output_data = 's3a://spark-bucket-rrmd/project-files/'
+    input_data = config['AWS']['INPUT_BUCKET']
+    output_data = config['AWS']['OUTPUT_BUCKET']
 
     process_song_data(spark, input_data, output_data)
 
