@@ -1,4 +1,2 @@
-data/**/*.json
-data/**/*.zip
-data/**/*DS_Store
+data
 Untitled.ipynb
