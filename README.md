@@ -29,5 +29,5 @@ the songs in the dataset above. These simulate app activity logs from an imagina
 configuration settings.
 
 ### Project Files
-etl.py - reads data from S3, processes that data using Spark, and writes them back to S3
-dl.cfg - contains your AWS credentials
+* etl.py - reads data from S3, processes that data using Spark, and writes them back to S3
+* dl.cfg - contains your AWS credentials
